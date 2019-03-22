@@ -1,0 +1,81 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+get_ipython().run_line_magic('matplotlib', 'inline')
+import numpy, scipy, IPython.display as ipy, matplotlib.pyplot as ply
+import seaborn
+import librosa, librosa.display
+ply.rcParams['figure.figsize'] = (14, 5)
+
+
+# In[7]:
+
+
+audio3sec = 'download.wav'
+x, sr = librosa.load (audio3sec)
+
+
+# In[8]:
+
+
+ipy.Audio(x, rate=sr)
+
+
+# In[13]:
+
+
+ply.figure(figsize=(14, 5))
+librosa.display.waveplot(x, sr=sr)
+
+
+# In[ ]:
+
+
+
+
+
+# In[21]:
+
+
+librosa.display.specshow(log_cqt, sr=sr, x_axis='time', y_axis='hz', 
+                         bins_per_octave=bins_per_octave)
+
+
+# In[23]:
+
+
+
+
+
+# In[36]:
+
+
+
+
+
+# In[37]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
